@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<link rel="stylesheet" href="shared.css"/>
+<title>03 Login Org B</title>
+<style>
+.phone { display:flex; flex-direction:column; }
+.bg {
+  position:absolute; inset: 52px 0 0; background:
+    linear-gradient(rgba(27,58,107,0.45), rgba(27,58,107,0.65)),
+    url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="400" height="800"><rect fill="%23e8ecf4" width="400" height="800"/><rect x="40" y="420" width="320" height="180" rx="8" fill="%23c5d0e4"/></svg>') center/cover;
+}
+.layer { position:relative; z-index:1; display:flex; flex-direction:column; height:100%; }
+.nav-bar { background:#1B3A6B; }
+.brand-row { display:flex; justify-content:space-between; align-items:flex-start; padding: 14px 16px 6px; }
+.logo-box {
+  background: rgba(255,255,255,0.95);
+  padding: 8px 12px; border-radius: 6px;
+  font-size: 11px; font-weight: 700; color: #1B3A6B;
+}
+.org-switch {
+  background:#1B3A6B; color:#fff; width:44px; height:44px;
+  border-radius:8px; display:flex; align-items:center; justify-content:center;
+  font-size:11px; text-align:center; border:2px solid #fff;
+}
+.form { padding: 24px 20px; margin-top: auto; margin-bottom: 80px; }
+.input { border-color:#1B3A6B; }
+.btn-primary { background:#1B3A6B; }
+.forgot { margin-top: 28px; text-align:center; color:#fff; font-size:15px; font-weight:600; }
+.org-pill {
+  margin-left:20px; font-size:13px; color:#fff;
+  background: rgba(0,0,0,.25); display:inline-block; padding:4px 10px; border-radius:999px;
+}
+.copyright { position:absolute; bottom:8px; left:0; right:0; text-align:center; font-size:9px; color:#333; z-index:2; }
+</style>
+</head>
+<body>
+<div class="wrap">
+<div class="phone">
+  <div class="bg"></div>
+  <div class="layer">
+    <div class="status-bar" style="background:#1B3A6B">9:41</div>
+    <div class="nav-bar">
+      <div class="left">☺</div>
+      Memorial Patient
+      <div class="right">↻ &nbsp; i</div>
+    </div>
+    <div class="brand-row">
+      <div class="logo-box">MEMORIAL<br/><span style="font-weight:400">Hospital Network</span></div>
+      <div class="org-switch">Change<br/>Org</div>
+    </div>
+    <div class="org-pill">Organisation: Memorial Hospital</div>
+    <div class="form">
+      <input class="input" placeholder="Username" value=""/>
+      <input class="input" placeholder="Password" type="password" value=""/>
+      <button class="btn-primary">LOGIN</button>
+      <div class="forgot">FORGOT PASSWORD ?</div>
+    </div>
+  </div>
+  <div class="copyright">Copyright © 2024–2026 Core Mobile, Inc.</div>
+</div>
+<div class="label-screen">Screen 3 — Branded login (Organisation B: Memorial, navy theme)</div>
+</div>
+</body>
+</html>

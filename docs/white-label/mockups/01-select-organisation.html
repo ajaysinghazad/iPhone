@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<link rel="stylesheet" href="shared.css"/>
+<title>01 Select Organisation</title>
+<style>
+.phone { background: #f2f2f7; display: flex; flex-direction: column; }
+.nav-bar { background: #1A9AB7; }
+.hero {
+  padding: 20px 20px 8px;
+  text-align: center;
+}
+.hero h2 { font-size: 22px; margin-bottom: 8px; color: #1c1c1e; }
+.hero p { font-size: 14px; color: #636366; line-height: 1.4; }
+.search-wrap { padding: 8px 16px 16px; }
+.search {
+  width: 100%;
+  padding: 12px 14px;
+  border-radius: 10px;
+  border: 1px solid #c7c7cc;
+  font-size: 16px;
+  background: #fff;
+}
+.section-title {
+  padding: 8px 20px;
+  font-size: 13px;
+  color: #636366;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+.org-row {
+  background: #fff;
+  margin: 0 16px 10px;
+  border-radius: 12px;
+  padding: 14px 16px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  border: 1px solid #e5e5ea;
+}
+.org-mark {
+  width: 44px; height: 44px; border-radius: 10px;
+  display: flex; align-items: center; justify-content: center;
+  font-weight: 700; font-size: 14px; color: #fff;
+}
+.org-mark.a { background: #1A9AB7; }
+.org-mark.b { background: #1B3A6B; }
+.org-mark.c { background: #2D6A4F; }
+.org-info { flex: 1; }
+.org-info strong { display: block; font-size: 16px; }
+.org-info span { font-size: 13px; color: #8e8e93; }
+.chev { color: #c7c7cc; font-size: 20px; }
+.manual {
+  margin: 16px;
+  padding: 14px;
+  text-align: center;
+  font-size: 15px;
+  color: #1A9AB7;
+  font-weight: 600;
+}
+.footer-note {
+  margin-top: auto;
+  padding: 20px;
+  text-align: center;
+  font-size: 11px;
+  color: #8e8e93;
+}
+.badge {
+  font-size: 11px;
+  background: #ffe8cc;
+  color: #9a5b00;
+  padding: 3px 8px;
+  border-radius: 999px;
+  margin-left: auto;
+}
+</style>
+</head>
+<body>
+<div class="wrap">
+<div class="phone">
+  <div class="status-bar" style="background:#1A9AB7;color:#fff;">9:41 <span>●●●</span></div>
+  <div class="nav-bar">Select Organisation</div>
+  <div class="hero">
+    <h2>Welcome to Corey Patient</h2>
+    <p>Choose your hospital or care facility to personalize your experience.</p>
+  </div>
+  <div class="search-wrap">
+    <input class="search" placeholder="Search organisation name or code" value=""/>
+  </div>
+  <div class="section-title">Suggested near you</div>
+  <div class="org-row">
+    <div class="org-mark a">VHA</div>
+    <div class="org-info"><strong>VHA Demo Medical Center</strong><span>Code: vhademo</span></div>
+    <span class="chev">›</span>
+  </div>
+  <div class="org-row">
+    <div class="org-mark b">MH</div>
+    <div class="org-info"><strong>Memorial Hospital</strong><span>Code: memorial01</span></div>
+    <span class="chev">›</span>
+  </div>
+  <div class="org-row">
+    <div class="org-mark c">SC</div>
+    <div class="org-info"><strong>Sunrise Clinic</strong><span>Code: sunrise</span></div>
+    <span class="chev">›</span>
+  </div>
+  <div class="manual">Enter organisation code manually</div>
+  <div class="footer-note">First launch only · Selection saved on this device</div>
+</div>
+<div class="label-screen">Screen 1 — First launch: Select Organisation</div>
+</div>
+</body>
+</html>
