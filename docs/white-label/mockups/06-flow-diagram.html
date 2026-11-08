@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<title>Flow Diagram</title>
+<style>
+body {
+  margin: 0; padding: 40px;
+  font-family: -apple-system, BlinkMacSystemFont, 'SF Pro Text', sans-serif;
+  background: #fff; width: 900px;
+}
+h1 { font-size: 24px; margin-bottom: 8px; }
+p.sub { color: #555; margin-bottom: 28px; font-size: 14px; }
+.flow { display: flex; flex-direction: column; gap: 10px; align-items: center; }
+.box {
+  border: 2px solid #1A9AB7;
+  border-radius: 10px;
+  padding: 12px 24px;
+  min-width: 320px;
+  text-align: center;
+  font-size: 14px;
+  background: #f8fcfd;
+}
+.box.decision { border-color: #c77700; background: #fff9f0; border-radius: 4px; transform: rotate(0deg); }
+.box.storage { border-style: dashed; border-color: #636366; background: #f2f2f7; }
+.arrow { color: #1A9AB7; font-size: 22px; line-height: 1; }
+.row { display: flex; gap: 24px; align-items: flex-start; justify-content: center; width: 100%; }
+.branch { display: flex; flex-direction: column; align-items: center; gap: 10px; }
+.label { font-size: 12px; color: #636366; font-weight: 600; }
+.legend {
+  margin-top: 32px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+  font-size: 13px;
+}
+.legend div { padding: 10px; background: #f2f2f7; border-radius: 8px; }
+</style>
+</head>
+<body>
+<h1>Corey Patient — White Label User Flow</h1>
+<p class="sub">First launch selects organisation; subsequent launches restore saved branding and skip selection.</p>
+<div class="flow">
+  <div class="box">App launch</div>
+  <div class="arrow">↓</div>
+  <div class="box decision">Saved organisation on device?</div>
+  <div class="row">
+    <div class="branch">
+      <div class="label">No — first launch</div>
+      <div class="arrow">↓</div>
+      <div class="box">Select / search organisation</div>
+      <div class="arrow">↓</div>
+      <div class="box">Match code → fetch OrgTheme (API)</div>
+      <div class="arrow">↓</div>
+      <div class="box storage">Persist orgId + theme cache (Keychain / UserDefaults)</div>
+    </div>
+    <div class="branch">
+      <div class="label">Yes — return launch</div>
+      <div class="arrow">↓</div>
+      <div class="box">Load saved org + theme</div>
+      <div class="arrow">↓</div>
+      <div class="box">Optional: refresh theme if stale</div>
+    </div>
+  </div>
+  <div class="arrow">↓</div>
+  <div class="box">Branded login (username + password only)</div>
+  <div class="arrow">↓</div>
+  <div class="box">Authenticate → Dashboard (themed navbar, accents, crisis button)</div>
+  <div class="arrow">↓</div>
+  <div class="box decision">User taps Change organisation?</div>
+  <div class="arrow">↓</div>
+  <div class="box">Clear session · show Select Organisation · apply new theme</div>
+</div>
+<div class="legend">
+  <div><strong>OrgTheme fields:</strong> primaryColor, secondaryColor, accentColor, loginWallpaperURL, logoURL, appDisplayName, navbarStyle</div>
+  <div><strong>Entry points for change:</strong> Login screen shortcut, Profile &amp; Settings → Change organisation</div>
+</div>
+</body>
+</html>

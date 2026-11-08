@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<link rel="stylesheet" href="shared.css"/>
+<title>05 Change Organisation</title>
+<style>
+.phone { display:flex; flex-direction:column; background:#f2f2f7; }
+.nav-bar { background:#1A9AB7; }
+.list { margin: 16px; background:#fff; border-radius:12px; overflow:hidden; }
+.row {
+  padding: 14px 16px;
+  border-bottom: 1px solid #e5e5ea;
+  display:flex; justify-content:space-between; align-items:center;
+  font-size: 16px;
+}
+.row:last-child { border-bottom:none; }
+.row.danger { color:#ff3b30; font-weight:600; }
+.meta { font-size:13px; color:#8e8e93; margin-top:4px; }
+.check { color:#1A9AB7; font-weight:700; }
+.hint {
+  padding: 0 20px 16px;
+  font-size: 13px;
+  color: #636366;
+  line-height: 1.45;
+}
+</style>
+</head>
+<body>
+<div class="wrap">
+<div class="phone">
+  <div class="status-bar" style="background:#1A9AB7">9:41</div>
+  <div class="nav-bar">
+    <div class="left">‹</div>
+    Profile &amp; Settings
+    <div class="right"></div>
+  </div>
+  <p class="hint">Account settings for your current organisation.</p>
+  <div class="list">
+    <div class="row">
+      <div>
+        Current organisation
+        <div class="meta">VHA Demo Medical Center (vhademo)</div>
+      </div>
+      <span class="check">✓</span>
+    </div>
+    <div class="row">Notification preferences <span>›</span></div>
+    <div class="row">Biometric login <span>›</span></div>
+  </div>
+  <div class="list" style="margin-top:12px">
+    <div class="row danger">Change organisation… <span>›</span></div>
+    <div class="row">Sign out <span>›</span></div>
+  </div>
+  <p class="hint">Changing organisation clears the local session and returns to the login screen with the new facility branding.</p>
+</div>
+<div class="label-screen">Screen 5 — Change organisation (Profile &amp; Settings)</div>
+</div>
+</body>
+</html>

@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<link rel="stylesheet" href="shared.css"/>
+<title>04 Dashboard</title>
+<style>
+.phone { display:flex; flex-direction:column; background:#fff; }
+.nav-bar { background:#1A9AB7; }
+.greet { background:#EBD699; color:#1c1c1e; text-align:center; padding:10px; font-size:15px; font-weight:500; }
+.grid {
+  display:grid; grid-template-columns:1fr 1fr; gap:14px;
+  padding: 18px 16px;
+}
+.tile {
+  border: 2px solid #1A9AB7;
+  border-radius: 12px;
+  padding: 18px 8px 12px;
+  text-align:center;
+  min-height: 150px;
+}
+.circle {
+  width: 72px; height: 72px; border-radius: 50%;
+  margin: 0 auto 10px;
+  display:flex; align-items:center; justify-content:center;
+  font-size: 28px;
+}
+.tile span { font-size: 13px; font-weight: 600; line-height: 1.2; }
+.c1 .circle { background:#1A9AB7; color:#fff; }
+.c2 .circle { background:#EBD699; }
+.c3 .circle { background:#EBD699; }
+.c4 .circle { background:#F0B27A; }
+.c5 .circle { background:#1A9AB7; color:#fff; }
+.c6 .circle { background:#d6e8ee; }
+.crisis {
+  margin: 8px 16px 20px;
+  background:#F0B27A;
+  border: none;
+  border-radius: 12px;
+  padding: 16px;
+  font-size: 17px;
+  font-weight: 600;
+  width: calc(100% - 32px);
+}
+.badge { position:absolute; top:-4px; right:-4px; background:#ff3b30; color:#fff; font-size:10px; border-radius:10px; padding:2px 5px; }
+.bell-wrap { position:relative; }
+</style>
+</head>
+<body>
+<div class="wrap">
+<div class="phone">
+  <div class="status-bar" style="background:#1A9AB7">9:41</div>
+  <div class="nav-bar">
+    <div class="left">✎ ⌕</div>
+    Dashboard
+    <div class="right bell-wrap">🔔<span class="badge">12</span> ⏻</div>
+  </div>
+  <div class="greet">Hello Zzt, D(3453) · VHA Demo Medical Center</div>
+  <div class="grid">
+    <div class="tile c1"><div class="circle">📁</div><span>Patient Data</span></div>
+    <div class="tile c2"><div class="circle">📝</div><span>Discharge Information</span></div>
+    <div class="tile c3"><div class="circle">📅</div><span>Appointment(s)</span></div>
+    <div class="tile c4"><div class="circle">📍</div><span>Way Finder</span></div>
+    <div class="tile c5"><div class="circle">📱</div><span>Message Care Team</span></div>
+    <div class="tile c6"><div class="circle">⚙</div><span>Profile &amp; Settings</span></div>
+  </div>
+  <button class="crisis">Crisis Line</button>
+</div>
+<div class="label-screen">Screen 4 — Dashboard with Organisation A theme applied</div>
+</div>
+</body>
+</html>
